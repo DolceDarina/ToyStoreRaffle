@@ -32,9 +32,11 @@ public class ToyRaffle {
                 } else {
                     writer.println("Игрушка не выпала: " + toy.getName());
                 }
+                writer.println(); // добавляем пустую строку после каждого запроса
             }
         } catch (IOException e) {
             System.out.println("Ошибка записи в файл: " + e.getMessage());
         }
     }
+    
 }
