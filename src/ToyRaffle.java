@@ -21,6 +21,7 @@ public class ToyRaffle {
     // Метод запуска розыгрыша
     public void startRaffle() {
         try (PrintWriter writer = new PrintWriter(new FileWriter("output/results.txt", true))) {
+            writer.println(); 
             for (int i = 0; i < 10; i++) {
                 if (toyQueue.isEmpty()) {
                     writer.println("Нет игрушек для розыгрыша.");
@@ -32,7 +33,6 @@ public class ToyRaffle {
                 } else {
                     writer.println("Игрушка не выпала: " + toy.getName());
                 }
-                writer.println(); // добавляем пустую строку после каждого запроса
             }
         } catch (IOException e) {
             System.out.println("Ошибка записи в файл: " + e.getMessage());
