@@ -21,7 +21,6 @@ public class ToyRaffle {
     // Метод запуска розыгрыша
     public void startRaffle() {
         try (PrintWriter writer = new PrintWriter(new FileWriter("output/results.txt", true))) {
-            writer.println();
             for (int i = 0; i < 10; i++) {
                 if (toyQueue.isEmpty()) {
                     writer.println("Нет игрушек для розыгрыша.");
